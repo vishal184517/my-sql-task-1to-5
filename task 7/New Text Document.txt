@@ -1,0 +1,42 @@
+CREATE DATABASE ecommerce;
+USE ecommerce;
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    city VARCHAR(50)
+);
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    category VARCHAR(50),
+    price DECIMAL(10,2),
+    availability VARCHAR(20)
+);
+
+
+INSERT INTO customers
+(customer_id, customer_name, email, city)
+VALUES
+(1, 'Mani', 'mani@gmail.com', 'Chennai'),
+(2, 'Arun', 'arun@gmail.com', 'Madurai'),
+(3, 'Karthik', 'karthik@gmail.com', 'Coimbatore'),
+(4, 'Priya', 'priya@gmail.com', 'Chennai'),
+(5, 'Suresh', 'suresh@gmail.com', 'Trichy'),
+(6, 'Divya', 'divya@gmail.com', 'Chennai');
+
+
+INSERT INTO products
+(product_id, product_name, category, price, availability)
+VALUES
+(101, 'Laptop', 'Electronics', 55000.00, 'Available'),
+(102, 'Mobile Phone', 'Electronics', 22000.00, 'Available'),
+(103, 'Headphones', 'Accessories', 1500.00, 'Available'),
+(104, 'Keyboard', 'Accessories', 1200.00, 'Out of Stock'),
+(105, 'Office Chair', 'Furniture', 8500.00, 'Available'),
+(106, 'Smart Watch', 'Electronics', 4500.00, 'Available'),
+(107, 'Mouse', 'Accessories', 800.00, 'Available'),
+(108, 'Table Lamp', 'Home Appliances', 1800.00, 'Available'),
+(109, 'Printer', 'Electronics', 12500.00, 'Out of Stock'),
+(110, 'Study Table', 'Furniture', 6500.00, 'Available');
